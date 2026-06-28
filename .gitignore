@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual Environment
+myvenv/
+venv/
+env/
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+
+# React
+Frontend/node_modules/
+Frontend/dist/
+
+# Environment Variables
+.env
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
