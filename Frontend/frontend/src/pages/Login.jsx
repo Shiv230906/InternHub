@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { loginUser } from "../services/authService";
+import "../styles/Login.css";
 
 function Login() {
     const navigate = useNavigate();
@@ -35,42 +36,47 @@ function Login() {
     };
 
     return (
-        <div style={{ padding: "30px" }}>
-            <h1>InternHub Login</h1>
+        <div className="login-page">
 
-            <form onSubmit={handleSubmit}>
+            <div className="circle circle1"></div>
+            <div className="circle circle2"></div>
 
-                <input
-                    type="text"
-                    name="username"
-                    placeholder="Username"
-                    value={formData.username}
-                    onChange={handleChange}
-                />
+            <div className="login-card">
 
-                <br /><br />
+                <h1>InternHub</h1>
+                <p>Track your internship journey effortlessly.</p>
 
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    value={formData.password}
-                    onChange={handleChange}
-                />
+                <form onSubmit={handleSubmit}>
 
-                <br /><br />
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="Username"
+                        value={formData.username}
+                        onChange={handleChange}
+                    />
 
-                <button type="submit">
-                    Login
-                </button>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        value={formData.password}
+                        onChange={handleChange}
+                    />
 
-            </form>
+                    <button type="submit">
+                        Login
+                    </button>
 
-            <br />
+                </form>
 
-            <Link to="/register">
-                Don't have an account? Register
-            </Link>
+                <div className="register">
+                    <Link to="/register">
+                        Don't have an account? Register
+                    </Link>
+                </div>
+
+            </div>
 
         </div>
     );

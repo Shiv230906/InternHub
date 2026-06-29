@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#1e293b;
+}
+
+/* Page */
+
+h1{
+    text-align:center;
+    font-size:36px;
+    color:#1e293b;
+    margin-bottom:35px;
+}
+
+/* Form */
+
+form{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+/* Inputs */
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:1px solid #dbe4ee;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    background:#f8fafc;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+/* Focus */
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:#2563eb;
+
+    background:white;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/* Textarea */
+
+textarea{
+
+    min-height:120px;
+
+    resize:vertical;
+
+}
+
+/* Button */
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 20px rgba(37,99,235,.25);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    form{
+
+        width:90%;
+
+        padding:25px;
+
+    }
+
+    h1{
+
+        font-size:30px;
+
+    }
+
+}

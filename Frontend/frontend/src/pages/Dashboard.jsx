@@ -4,6 +4,7 @@ import { getInternships } from "../services/internshipService";
 import {
     deleteInternship
 } from "../services/internshipService";
+import "../styles/dashboard.css";
 
 function Dashboard() {
 
@@ -56,51 +57,95 @@ function Dashboard() {
 
 };
 
-    return (
-        <div style={{ padding: "30px" }}>
+   return (
+    <div className="dashboard">
 
-            <h1>InternHub Dashboard</h1>
+        <header className="dashboard-header">
 
-            <button onClick={handleLogout}>
-                Logout
-            </button>
+            <div>
+                <h1>InternHub</h1>
+                <p>Manage all your internship applications</p>
+            </div>
 
-            <hr />
-            <button onClick={() => navigate("/add")}>
-            Add Internship
-            </button>
+            <div className="top-buttons">
+                <button
+                    className="add-btn"
+                    onClick={() => navigate("/add")}
+                >
+                    + Add Internship
+                </button>
 
-            <hr />
-            <h2>My Internships</h2>
+                <button
+                    className="logout-btn"
+                    onClick={handleLogout}
+                >
+                    Logout
+                </button>
+            </div>
 
-            {internships.length === 0 ? (
-                <p>No internships found.</p>
-            ) : (
-                internships.map((internship) => (
-                    <div
-                        key={internship.id}
-                        style={{
-                            border: "1px solid black",
-                            padding: "10px",
-                            marginBottom: "10px",
-                        }}
-                    >
+        </header>
+
+        <h2 className="section-title">My Internships</h2>
+
+        {internships.length === 0 ? (
+
+            <div className="empty-card">
+                No internships found.
+            </div>
+
+        ) : (
+
+            internships.map((internship) => (
+
+                <div
+                    className="internship-card"
+                    key={internship.id}
+                >
+
+                    <div className="card-left">
+
                         <h3>{internship.company_name}</h3>
-                        <p>Role: {internship.role}</p>
-                        <p>Status: {internship.status}</p>
-                        <p>Location: {internship.location}</p>
-                        <button onClick={() => navigate(`/edit/${internship.id}`)}>
+
+                        <p><strong>Role</strong> • {internship.role}</p>
+
+                        <p><strong>Location</strong> • {internship.location}</p>
+
+                        <span className="status">
+                            {internship.status}
+                        </span>
+
+                    </div>
+
+                    <div className="card-right">
+
+                        <button
+                            className="edit-btn"
+                            onClick={() =>
+                                navigate(`/edit/${internship.id}`)
+                            }
+                        >
                             Edit
                         </button>
-                        <button onClick={() => handleDelete(internship.id)}>
+
+                        <button
+                            className="delete-btn"
+                            onClick={() =>
+                                handleDelete(internship.id)
+                            }
+                        >
                             Delete
                         </button>
-                    </div>
-                ))
-            )}
 
-        </div>
-    );
+                    </div>
+
+                </div>
+
+            ))
+
+        )}
+
+    </div>
+);
 }
 
 export default Dashboard;

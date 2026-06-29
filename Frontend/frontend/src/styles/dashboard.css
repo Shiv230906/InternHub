@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+.dashboard{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:40px;
+
+}
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:40px;
+
+}
+
+.dashboard-header h1{
+
+    font-size:34px;
+
+    color:#1e293b;
+
+}
+
+.dashboard-header p{
+
+    color:#64748b;
+
+    margin-top:5px;
+
+}
+
+.top-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+/* Small Buttons */
+
+.add-btn,
+.logout-btn,
+.edit-btn,
+.delete-btn{
+
+    padding:8px 16px;
+
+    font-size:14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    width:auto;
+
+}
+
+.add-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.logout-btn{
+
+    background:white;
+
+    color:#2563eb;
+
+    border:1px solid #2563eb;
+
+}
+
+.edit-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.delete-btn{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+.add-btn:hover,
+.edit-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.logout-btn:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.delete-btn:hover{
+
+    background:#dc2626;
+
+}
+
+/* Cards */
+
+.internship-card{
+
+    background:white;
+
+    border-left:5px solid #2563eb;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+.internship-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 24px rgba(0,0,0,.10);
+
+}
+
+.card-left h3{
+
+    color:#1e293b;
+
+    margin-bottom:8px;
+
+}
+
+.card-left p{
+
+    color:#64748b;
+
+    margin:5px 0;
+
+}
+
+/* Status Badge */
+
+.status{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.card-right{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.section-title{
+
+    margin-bottom:20px;
+
+    color:#334155;
+
+}
+
+.empty-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    color:#64748b;
+
+}

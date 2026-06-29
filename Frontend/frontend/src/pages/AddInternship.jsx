@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createInternship } from "../services/internshipService";
+import "../styles/addInternship.css";
 function AddInternship() {
 
     const navigate = useNavigate();
